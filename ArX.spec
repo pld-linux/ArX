@@ -7,7 +7,7 @@ License:	GPL
 Group:		Development/Version Control
 Source0:	http://superbeast.ucsd.edu/~landry/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	e807b140d00882c57de8cfa322300e8c
-URL:		http://arx.fifthvision.net/
+URL:		http://savannah.nongnu.org/projects/arx/
 PreReq:		fileutils gawk sed sh-utils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
