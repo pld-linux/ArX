@@ -1,25 +1,35 @@
 Summary:	ArX version control system
+Summary(pl):	System kontroli wersji ArX
 Name:		ArX
 Version:	1.0pre8
 Release:	1
-URL:		http://arx.fifthvision.net/
+License:	GPL
+Group:		Development/Version Control
 Source0:	http://superbeast.ucsd.edu/~landry/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	e807b140d00882c57de8cfa322300e8c
-License:	GPL
-Group:		Development/Tools
+URL:		http://arx.fifthvision.net/
+PreReq:		fileutils gawk sed sh-utils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Prereq:		fileutils gawk sed sh-utils
 
 %description
 ArX is a source control management system with distributed
 repositories, easy branching, and rich merge tools.
 
+%description -l pl
+ArX jest systemem zarz±dzania ¼ród³ami w rozproszonych repozytoriach.
+Umo¿liwia ³atwe tworzenie rozga³êzieñ i zawiera narzêdzia uzgadniaj±ce
+o bogatych mo¿liwo¶ciach.
+
 %package devel
-Summary: ArX headers and static libs
-Group: Development/Libraries
+Summary:	ArX headers and static libs
+Summary(pl):	Pliki nag³ówkowe i biblioteki statyczne ArX
+Group:		Development/Libraries
 
 %description devel
-ArX headers and static libs
+This package contains ArX headers and static libs.
+
+%description devel -l pl
+Ten pakiet zawiera pliki nag³ówkowe i biblioteki statyczne ArX.
 
 %prep
 %setup -q
