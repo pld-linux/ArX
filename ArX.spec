@@ -1,12 +1,12 @@
 Summary:	ArX version control system
 Summary(pl):	System kontroli wersji ArX
 Name:		ArX
-Version:	1.0pre8
+Version:	1.0pre13
 Release:	1
 License:	GPL
 Group:		Development/Version Control
 Source0:	http://superbeast.ucsd.edu/~landry/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	e807b140d00882c57de8cfa322300e8c
+# Source0-md5:	f297121ab3319f91c4103c68376f8c03
 URL:		http://savannah.nongnu.org/projects/arx/
 PreReq:		fileutils gawk sed sh-utils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
