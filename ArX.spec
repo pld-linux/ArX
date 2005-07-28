@@ -1,12 +1,12 @@
 Summary:	ArX version control system
 Summary(pl):	System kontroli wersji ArX
 Name:		ArX
-Version:	1.0pre13
-Release:	1
+Version:	2.2.3
+Release:	0.1
 License:	GPL
 Group:		Development/Version Control
 Source0:	http://superbeast.ucsd.edu/~landry/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	f297121ab3319f91c4103c68376f8c03
+# Source0-md5:	486a6f638e524854548694878b601211
 URL:		http://savannah.nongnu.org/projects/arx/
 PreReq:		fileutils gawk sed sh-utils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,28 +35,29 @@ Ten pakiet zawiera pliki nag³ówkowe i biblioteki statyczne ArX.
 %setup -q
 
 %build
-mkdir =build
-cd =build
-../src/configure --prefix=/usr
+%configure --prefix=$RPM_BUILD_ROOT%{_prefix} --bindir=$RPM_BUILD_ROOT%{_bindir} --mandir=$RPM_BUILD_ROOT%{_mandir}
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd =build
 install -d $RPM_BUILD_ROOT%{_prefix}
-%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} real-prefix=%{_prefix} install
+
+%{__make} install 
+#bindir=$RPM_BUILD_ROOT%{_bindir} prefix=$RPM_BUILD_ROOT%{_prefix} mandir=$RPM_BUILD_ROOT%{_mandir} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%{_docdir}/arx
 %attr(755,root,root) %{_bindir}/*
-%dir /usr/libexec/arch/
-%dir /usr/libexec/arch/*
-%attr(755,root,root) /usr/libexec/arch/*/*
+%{_mandir}/man1/arx.1.*
+#%dir /usr/libexec/arch/
+#%dir /usr/libexec/arch/*
+#%attr(755,root,root) /usr/libexec/arch/*/*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/*
-%{_libdir}/*.a
+#%{_includedir}/*
+#%{_libdir}/*.a
