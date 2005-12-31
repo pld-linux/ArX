@@ -5,10 +5,13 @@ Version:	2.2.3
 Release:	0.1
 License:	GPL
 Group:		Development/Version Control
-Source0:	http://superbeast.ucsd.edu/~landry/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://superbeast.ucsd.edu/~landry/ArX/%{name}-%{version}.tar.gz
 # Source0-md5:	486a6f638e524854548694878b601211
 URL:		http://savannah.nongnu.org/projects/arx/
-PreReq:		fileutils gawk sed sh-utils
+Requires:	fileutils
+Requires:	gawk
+Requires:	sed
+Requires:	sh-utils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,14 +38,18 @@ Ten pakiet zawiera pliki nag³ówkowe i biblioteki statyczne ArX.
 %setup -q
 
 %build
-%configure --prefix=$RPM_BUILD_ROOT%{_prefix} --bindir=$RPM_BUILD_ROOT%{_bindir} --mandir=$RPM_BUILD_ROOT%{_mandir}
+%configure \
+	--prefix=$RPM_BUILD_ROOT%{_prefix} \
+	--bindir=$RPM_BUILD_ROOT%{_bindir} \
+	--mandir=$RPM_BUILD_ROOT%{_mandir} \
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}
 
-%{__make} install 
+%{__make} install
 #bindir=$RPM_BUILD_ROOT%{_bindir} prefix=$RPM_BUILD_ROOT%{_prefix} mandir=$RPM_BUILD_ROOT%{_mandir} install
 
 %clean
@@ -53,9 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_docdir}/arx
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/arx.1.*
-#%dir /usr/libexec/arch/
-#%dir /usr/libexec/arch/*
-#%attr(755,root,root) /usr/libexec/arch/*/*
+#%dir %{_prefix}/libexec/arch/
+#%dir %{_prefix}/libexec/arch/*
+#%attr(755,root,root) %{_prefix}/libexec/arch/*/*
 
 %files devel
 %defattr(644,root,root,755)
