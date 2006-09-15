@@ -59,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_docdir}/arx
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/arx.1.*
+%{_mandir}/man1/arx.1*
 #%dir %{_prefix}/libexec/arch/
 #%dir %{_prefix}/libexec/arch/*
 #%attr(755,root,root) %{_prefix}/libexec/arch/*/*
