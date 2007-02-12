@@ -1,5 +1,5 @@
 Summary:	ArX version control system
-Summary(pl):	System kontroli wersji ArX
+Summary(pl.UTF-8):   System kontroli wersji ArX
 Name:		ArX
 Version:	2.2.3
 Release:	0.1
@@ -18,21 +18,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 ArX is a source control management system with distributed
 repositories, easy branching, and rich merge tools.
 
-%description -l pl
-ArX jest systemem zarz±dzania ºrÛd≥ami w rozproszonych repozytoriach.
-Umoøliwia ≥atwe tworzenie rozga≥ÍzieÒ i zawiera narzÍdzia uzgadniaj±ce
-o bogatych moøliwo∂ciach.
+%description -l pl.UTF-8
+ArX jest systemem zarzƒÖdzania ≈∫r√≥d≈Çami w rozproszonych repozytoriach.
+Umo≈ºliwia ≈Çatwe tworzenie rozga≈Çƒôzie≈Ñ i zawiera narzƒôdzia uzgadniajƒÖce
+o bogatych mo≈ºliwo≈õciach.
 
 %package devel
 Summary:	ArX headers and static libs
-Summary(pl):	Pliki nag≥Ûwkowe i biblioteki statyczne ArX
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe i biblioteki statyczne ArX
 Group:		Development/Libraries
 
 %description devel
 This package contains ArX headers and static libs.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag≥Ûwkowe i biblioteki statyczne ArX.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nag≈Ç√≥wkowe i biblioteki statyczne ArX.
 
 %prep
 %setup -q
