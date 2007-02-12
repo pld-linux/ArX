@@ -1,5 +1,5 @@
 Summary:	ArX version control system
-Summary(pl.UTF-8):   System kontroli wersji ArX
+Summary(pl.UTF-8):	System kontroli wersji ArX
 Name:		ArX
 Version:	2.2.3
 Release:	0.1
@@ -25,7 +25,7 @@ o bogatych możliwościach.
 
 %package devel
 Summary:	ArX headers and static libs
-Summary(pl.UTF-8):   Pliki nagłówkowe i biblioteki statyczne ArX
+Summary(pl.UTF-8):	Pliki nagłówkowe i biblioteki statyczne ArX
 Group:		Development/Libraries
 
 %description devel
