@@ -1,12 +1,12 @@
 Summary:	ArX version control system
 Summary(pl.UTF-8):	System kontroli wersji ArX
 Name:		ArX
-Version:	2.2.3
+Version:	2.2.4
 Release:	0.1
 License:	GPL
 Group:		Development/Version Control
-Source0:	http://superbeast.ucsd.edu/~landry/ArX/%{name}-%{version}.tar.gz
-# Source0-md5:	486a6f638e524854548694878b601211
+Source0:	http://savannah.nongnu.org/download/arx/%{name}-%{version}.tar.gz
+# Source0-md5:	75ef7a4b16e7cd3ebb9724298f2751f6
 URL:		http://savannah.nongnu.org/projects/arx/
 Requires:	fileutils
 Requires:	gawk
@@ -41,7 +41,7 @@ Ten pakiet zawiera pliki nagłówkowe i biblioteki statyczne ArX.
 %configure \
 	--prefix=$RPM_BUILD_ROOT%{_prefix} \
 	--bindir=$RPM_BUILD_ROOT%{_bindir} \
-	--mandir=$RPM_BUILD_ROOT%{_mandir} \
+	--mandir=$RPM_BUILD_ROOT%{_mandir}
 
 %{__make}
 
